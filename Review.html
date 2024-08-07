@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="src/style.css"> 
+</head>
+<body>
+  <h2>Your Feedback Matters!</h2>
+
+  <form id="feedbackForm" action="https://formsubmit.co/jawn.priest100@gmail.com" method="POST" target="_blank">
+    <label for="rating">Rate your experience:</label>
+    <select id="rating" name="rating" required onchange="showForm(this.value)">
+      <option value="">Select Rating</option>
+      <option value="1">★☆☆☆☆</option>
+      <option value="2">★★☆☆☆</option>
+      <option value="3">★★★☆☆</option>
+      <option value="4">★★★★☆</option>
+      <option value="5">★★★★★</option>
+    </select>
+
+    <div id="formSection" class="form" style="display: none;">
+      <h3>Send us your concerns:</h3>
+      <p>Order# or item:</p>
+      <input type="text" id="name" name="name">
+      <p>Message:</p>
+      <textarea id="message" name="message" maxlength="600" rows="4" cols="50" required></textarea>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+  <div id="thankYouMessage" style="display: none;">
+    <p>Thank you for reaching out to us, we'll take your suggestion to heart.</p>
+  </div>
+
+  <div id="reviewPrompt" style="display: none;">
+    <h3>Thank you for your 5-star review!</h3>
+    <p>
+      Would you be willing to leave a review on our Etsy shop or Google page?
+    </p>
+    <ul>
+      <li><a href="https://www.etsy.com/shop/SoExcitableSoaps" target="_blank">Etsy Shop</a></li>
+      <li><a href="https://g.page/r/CczXmsfiyGIOEBM/review" target="_blank">Google Page</a></li>
+    </ul>
+  </div>
+
+  <script>
+    <script src="src/formMg.js"></script>
+  </script>
+</body>
+</html>
